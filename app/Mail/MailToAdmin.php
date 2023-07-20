@@ -9,17 +9,17 @@ use Illuminate\Mail\Mailables\Content;
 use Illuminate\Mail\Mailables\Envelope;
 use Illuminate\Queue\SerializesModels;
 
-class MailToLead extends Mailable {
+class MailToAdmin extends Mailable
+{
     use Queueable, SerializesModels;
-
     public $lead;
-
     /**
      * Create a new message instance.
      *
      * @return void
      */
-    public function __construct($lead) {
+    public function __construct($lead)
+    {
         $this->lead = $lead;
     }
 
@@ -28,10 +28,11 @@ class MailToLead extends Mailable {
      *
      * @return \Illuminate\Mail\Mailables\Envelope
      */
-    public function envelope() {
+    public function envelope()
+    {
         return new Envelope(
-            replyTo: $this->lead->email,
-            subject: 'Info request received. ' . $this->lead->name,
+            replyTo: 'admin@boolpress.com',
+            subject: 'New request from ' . $this->lead->name,
         );
     }
 
@@ -40,9 +41,10 @@ class MailToLead extends Mailable {
      *
      * @return \Illuminate\Mail\Mailables\Content
      */
-    public function content() {
+    public function content()
+    {
         return new Content(
-            view: 'emails.mail-to-lead',
+            view: 'emails.mail-to-admin',
         );
     }
 
@@ -51,7 +53,8 @@ class MailToLead extends Mailable {
      *
      * @return array
      */
-    public function attachments() {
+    public function attachments()
+    {
         return [];
     }
 }

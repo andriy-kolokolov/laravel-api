@@ -3,8 +3,11 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
+use App\Mail\MailToAdmin;
+use App\Mail\MailToLead;
 use App\Models\Lead;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class LeadController extends Controller
 {
@@ -36,7 +39,16 @@ class LeadController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = $request->all();
+        $newLead = new Lead();
+        $newLead->name = $data['name'];
+        $newLead->email = $data['email'];
+        $newLead->message = $data['message'];
+        $newLead->newsletter = $data['newsletter'];
+        $newLead->save();
+
+        Mail::to($newLead->email)->send(new MailToLead($newLead));
+        Mail::to('admin@gmail.com')->send(new MailToAdmin($newLead));
     }
 
     /**
