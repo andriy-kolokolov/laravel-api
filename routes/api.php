@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Api\LeadController;
 use App\Http\Controllers\Api\ProjectController;
 use Illuminate\Support\Facades\Route;
 
@@ -20,3 +21,5 @@ use Illuminate\Support\Facades\Route;
 
 // Route::get('api/projects', [ProjectController::class, 'index'])->name('api.posts.index');
 Route::get('projects', [ProjectController::class, 'index'])->name('api.posts.index');
+
+Route::post('leads', [LeadController::class, 'store'])->name('api.leads.store');

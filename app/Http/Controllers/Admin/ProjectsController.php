@@ -63,8 +63,6 @@ class ProjectsController extends Controller {
         $request->validate($this->validations, $this->validation_messages);
         $data = $request->all();
 
-
-
         //        $imgPath = Storage::put('uploads', $data['image']);
 
         // get type id (one to many)
