@@ -63,7 +63,7 @@ class ProjectsController extends Controller {
         $request->validate($this->validations, $this->validation_messages);
         $data = $request->all();
 
-        $imagePath = Storage::put('uploads', $data['image']);
+
 
         //        $imgPath = Storage::put('uploads', $data['image']);
 
@@ -73,7 +73,10 @@ class ProjectsController extends Controller {
         $newProject = new Project();
         $newProject->title = $data['title'];
         $newProject->type_id = $type_id;
-        $newProject->image = $imagePath;
+        if (isset($data['image'])) {
+            $imagePath = Storage::put('uploads', $data['image']);
+            $newProject->image = $imagePath;
+        }
         $newProject->slug = Str::slug($data['title']);
         $newProject->description = $data['description'];
         $newProject->project_url = $data['project_url'];
