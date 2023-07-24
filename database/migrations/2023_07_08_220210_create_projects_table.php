@@ -21,8 +21,6 @@ return new class extends Migration
             $table->string('slug', 100)->unique();
             $table->text('description')->nullable();
             $table->string('project_url', 600)->nullable();
-
-            $table->timestamps();
         });
     }
 

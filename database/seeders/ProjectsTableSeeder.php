@@ -1,105 +1,116 @@
 <?php
+
 namespace Database\Seeders;
 
-use App\Models\Project\ProgrammingLanguage;
-use App\Models\Project\Project;
 use Illuminate\Database\Seeder;
-use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Str;
 
 class ProjectsTableSeeder extends Seeder
 {
+
     /**
-     * Run the database seeds.
+     * Auto generated seed file
      *
      * @return void
      */
-    public function run(): void
+    public function run()
     {
-        $types = [
-            ['name' => 'Front End'],
-            ['name' => 'Back End'],
-            ['name' => 'Full Stack'],
-        ];
-        DB::table('types')->insert($types);
+        
 
-        $programmingLanguages = [
-            ['name' => 'JS'],
-            ['name' => 'HTML'],
-            ['name' => 'SASS'],
-            ['name' => 'PHP'],
-            ['name' => 'JAVA'],
-        ];
-        DB::table('programming_languages')->insert($programmingLanguages);
-
-        $technologies = [
-            ['name' => 'VUE.JS'],
-            ['name' => 'HIBERNATE'],
-            ['name' => 'MYSQL'],
-            ['name' => 'MAVEN'],
-            ['name' => 'JDBC'],
-            ['name' => 'BOOTSTRAP'],
-            ['name' => 'LARAVEL'],
-        ];
-        DB::table('technologies')->insert($technologies);
-
-        // Seed projects table
-        $projects = [
-            [
-                'title' => 'boolzap',
+        \DB::table('projects')->delete();
+        
+        \DB::table('projects')->insert(array (
+            0 => 
+            array (
+                'id' => 1,
                 'type_id' => 1,
-                'slug' =>  Str::slug('boolzap'),
+                'title' => 'Whatsap Clone',
+                'image' => 'uploads/wuBL71cSIWrgziTSe9yqvvxLZyxg2K6yg5icnwTt.png',
+                'slug' => 'whatsap-clone',
                 'description' => 'Whatsup clone using VUE JS',
                 'project_url' => 'https://github.com/andriy-kolokolov/vue-boolzapp',
-            ],
-            [
+            ),
+            1 => 
+            array (
+                'id' => 2,
+                'type_id' => 2,
                 'title' => 'Java CRUD and tests',
-                'type_id' => 2,
-                'slug' =>  Str::slug('Java CRUD and tests'),
-                'description' => 'Used DAO (Data Access Object) Pattern. CRUD methods and tests JAVA HIBERNATE',
+                'image' => NULL,
+                'slug' => 'java-crud-and-tests',
+            'description' => 'Used DAO (Data Access Object) Pattern. CRUD methods and tests JAVA HIBERNATE',
                 'project_url' => 'https://github.com/andriy-kolokolov/java-hibernate-jdbc-database-manager',
-            ],
-            [
-                'title' => 'Java Roman Calculator',
+            ),
+            2 => 
+            array (
+                'id' => 3,
                 'type_id' => 2,
-                'slug' =>  Str::slug('Java Roman Calculator'),
+                'title' => 'Java Roman Calculator',
+                'image' => NULL,
+                'slug' => 'java-roman-calculator',
                 'description' => 'Just a simple Roman calculator using a hashmap to convert an integer to a Roman numeral. Inspired to create it after completing the LeetCode task "https://leetcode.com/problems/roman-to-integer/"',
                 'project_url' => 'https://github.com/andriy-kolokolov/java-roman-calculator',
-            ],
-            [
-                'title' => 'Todo List Teamwork',
+            ),
+            3 => 
+            array (
+                'id' => 4,
                 'type_id' => 3,
-                'slug' => Str::slug('Todo List Teamwork'),
-                'description' => 'This project focuses on teamwork and GIT version control. This is a Simple Todo List manager. ',
+                'title' => 'Todo List Teamwork',
+                'image' => 'uploads/1r5u70XUtaH53CY0LE7YQjjoeC7KCe0QJEkfwtJz.png',
+                'slug' => 'todo-list-teamwork',
+                'description' => 'This project focuses on teamwork and GIT version control. This is a Simple Todo List manager.',
                 'project_url' => 'https://github.com/alessandropecchini99/laravel-boolean',
-            ],
-        ];
-
-//        for ($i = 0; $i < count($projects); $i++)
-        foreach ($projects as $project){
-            Project::create([
-                'title' => $project['title'],
-                'type_id' => $project['type_id'],
-                'slug' => Str::slug($project['title']),
-                'description' => $project['description'],
-                'project_url' => $project['project_url'],
-            ]);
-        }
-
-        $project1 = Project::find(1);
-        $project2 = Project::find(2);
-        $project3 = Project::find(3);
-        $project4 = Project::find(4);
-
-        $project1->programmingLanguages()->sync([1, 2, 3]);
-        $project2->programmingLanguages()->sync(5);
-        $project3->programmingLanguages()->sync(5);
-        $project4->programmingLanguages()->sync([3, 4]);
-
-        $project1->technologies()->sync([1, 6]);
-        $project2->technologies()->sync([2, 3, 4, 5]);
-        $project3->technologies()->sync(5);
-        $project4->technologies()->sync([3, 6, 7]);
-
+            ),
+            4 => 
+            array (
+                'id' => 5,
+                'type_id' => 1,
+                'title' => 'Admin Dashboard',
+                'image' => 'uploads/Hwj4MbRgQRTD9A0WluF3wqfwm5uPjUR7LPVmN5DS.png',
+                'slug' => 'admin-dashboard',
+                'description' => 'Full responsive layout',
+                'project_url' => 'https://github.com/andriy-kolokolov/html-css-bootstrap-dashboard',
+            ),
+            5 => 
+            array (
+                'id' => 6,
+                'type_id' => 1,
+                'title' => 'Spotify Clone',
+                'image' => 'uploads/uEKaUX5KRK22CiXqw7HReS4SgKJ9BWQhArIeUVNB.png',
+                'slug' => 'spotify-clone',
+                'description' => 'Full responsive layout',
+                'project_url' => 'https://github.com/andriy-kolokolov/html-css-spotifyweb',
+            ),
+            6 => 
+            array (
+                'id' => 7,
+                'type_id' => 1,
+                'title' => 'Art Coach Portfolio',
+                'image' => 'uploads/1vMkcggfmoWLWktIlTcZacRXzMxRKFq48o7YqGsp.png',
+                'slug' => 'art-coach-portfolio',
+                'description' => NULL,
+                'project_url' => 'https://github.com/andriy-kolokolov/proj-html-vuejs',
+            ),
+            7 => 
+            array (
+                'id' => 8,
+                'type_id' => 1,
+                'title' => 'Social Posts',
+                'image' => 'uploads/uOFKsKX7Z7m5X2k7bQETs4cIKDdyErsiyxaLpR99.png',
+                'slug' => 'social-posts',
+                'description' => NULL,
+                'project_url' => 'https://github.com/andriy-kolokolov/js-social-posts',
+            ),
+            8 => 
+            array (
+                'id' => 9,
+                'type_id' => 1,
+                'title' => 'Shopping List Manager',
+                'image' => 'uploads/Dvbvp3hl3ws3dcSmtd2gWdkV7sixVlMaWwEva8BQ.png',
+                'slug' => 'shopping-list-manager',
+                'description' => 'Add/delete todos for shoping',
+                'project_url' => 'https://github.com/andriy-kolokolov/js-lista-spesa',
+            ),
+        ));
+        
+        
     }
 }
