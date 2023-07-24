@@ -38,7 +38,7 @@ class ProjectsController extends Controller {
      * @return \Illuminate\Http\Response
      */
     public function index() {
-        $projects = Project::paginate(5);
+        $projects = Project::paginate(10);
         return view('admin.projects.index', compact('projects'));
     }
 
@@ -159,7 +159,9 @@ class ProjectsController extends Controller {
             // save new project image
             $imagePath = Storage::put('uploads', $data['image']);
             // delete old image if exist
-            Storage::delete($project->image);
+            if (isset($project['image'])) {
+                Storage::delete($project->image);
+            }
             $project->image = $imagePath;
         }
 

@@ -11,7 +11,8 @@
                     <a href="{{ route('admin.projects.index', ['$project' => $project]) }}">
                         <button class="mt-3 btn btn-primary mb-3">Back to Projects</button>
                     </a>
-                    <form method="POST" action="{{ route('admin.projects.update', $project->id) }}" enctype="multipart/form-data">
+                    <form method="POST" action="{{ route('admin.projects.update', $project->id) }}"
+                          enctype="multipart/form-data">
                         @csrf
                         @method('PUT')
 
@@ -36,11 +37,11 @@
                         <div class="form-group mb-3">
                             <label for="title">Title</label>
                             <input type="text" name="title" id="title" class="form-control"
-                            value="{{ $project->title }}" required>
+                                   value="{{ $project->title }}" required>
                             @error('title')
                             <div class="text-danger">
-                                    {{ $message }}
-                                </div>
+                                {{ $message }}
+                            </div>
                             @enderror
                         </div>
 
@@ -51,7 +52,8 @@
                                 <option value="">Select a project type..</option>
 
                                 @foreach ($types as $type)
-                                    <option value="{{ $type['name'] }}" {{ $project->type->name == $type['name'] ? 'selected' : '' }}>
+                                    <option
+                                        value="{{ $type['name'] }}" {{ $project->type->name == $type['name'] ? 'selected' : '' }}>
                                         {{ $type['name'] }}
                                     </option>
                                 @endforeach
@@ -92,11 +94,11 @@
                         <div class="form-group mb-3">
                             <label for="description">Description</label>
                             <textarea name="description" id="description" class="form-control" rows="4"
-                                      required>{{ $project->description }}</textarea>
+                            >{{ $project->description }}</textarea>
                             @error('description')
-                                <div class="text-danger">
-                                    {{ $message }}
-                                </div>
+                            <div class="text-danger">
+                                {{ $message }}
+                            </div>
                             @enderror
                         </div>
 
