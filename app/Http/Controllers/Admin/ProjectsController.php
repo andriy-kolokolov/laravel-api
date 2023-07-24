@@ -59,16 +59,18 @@ class ProjectsController extends Controller {
      * @return \Illuminate\Http\RedirectResponse
      */
     public function store(Request $request): RedirectResponse {
-
         $request->validate($this->validations, $this->validation_messages);
         $data = $request->all();
 
-        //        $imgPath = Storage::put('uploads', $data['image']);
+        // Get the highest order value from the database and add 1 to it
+        $highestOrder = Project::max('order');
+        $newOrder = $highestOrder + 1;
 
         // get type id (one to many)
         $type_id = DB::table('types')->where('name', $data['type'])->value('id');
 
         $newProject = new Project();
+        $newProject->order = $newOrder;
         $newProject->title = $data['title'];
         $newProject->type_id = $type_id;
         if (isset($data['image'])) {

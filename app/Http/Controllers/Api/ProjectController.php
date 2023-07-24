@@ -13,6 +13,7 @@ class ProjectController extends Controller
         $perPage = $request->query('per_page', 8);
 
         $projects = Project::with('type', 'programmingLanguages', 'technologies')
+            ->orderBy('order')
             ->paginate($perPage);
         return response()->json($projects);
     }
