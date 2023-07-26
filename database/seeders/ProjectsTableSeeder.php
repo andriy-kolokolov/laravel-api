@@ -14,112 +14,156 @@ class ProjectsTableSeeder extends Seeder
      */
     public function run()
     {
-
+        
 
         \DB::table('projects')->delete();
-
+        
         \DB::table('projects')->insert(array (
-            0 =>
+            0 => 
             array (
                 'id' => 1,
-                'order' => 1,
                 'type_id' => 1,
+                'order' => 1,
                 'title' => 'Whatsap Clone',
-                'image' => 'uploads/wuBL71cSIWrgziTSe9yqvvxLZyxg2K6yg5icnwTt.png',
+                'image' => 'uploads/MTceIzl8o9X0fi9zxfV73j1Po5wv4HEge43PriQP.png',
                 'slug' => 'whatsap-clone',
                 'description' => 'Whatsup clone using VUE JS',
                 'project_url' => 'https://github.com/andriy-kolokolov/vue-boolzapp',
             ),
-            1 =>
+            1 => 
             array (
                 'id' => 2,
-                'order' =>  8,
                 'type_id' => 2,
+                'order' => 8,
                 'title' => 'Java CRUD and tests',
                 'image' => NULL,
                 'slug' => 'java-crud-and-tests',
             'description' => 'Used DAO (Data Access Object) Pattern. CRUD methods and tests JAVA HIBERNATE',
                 'project_url' => 'https://github.com/andriy-kolokolov/java-hibernate-jdbc-database-manager',
             ),
-            2 =>
+            2 => 
             array (
                 'id' => 3,
-                'order' =>  9,
                 'type_id' => 2,
+                'order' => 9,
                 'title' => 'Java Roman Calculator',
                 'image' => NULL,
                 'slug' => 'java-roman-calculator',
                 'description' => 'Just a simple Roman calculator using a hashmap to convert an integer to a Roman numeral. Inspired to create it after completing the LeetCode task "https://leetcode.com/problems/roman-to-integer/"',
                 'project_url' => 'https://github.com/andriy-kolokolov/java-roman-calculator',
             ),
-            3 =>
-            array (
-                'id' => 4,
-                'order' =>  3,
-                'type_id' => 3,
-                'title' => 'Todo List Teamwork',
-                'image' => 'uploads/1r5u70XUtaH53CY0LE7YQjjoeC7KCe0QJEkfwtJz.png',
-                'slug' => 'todo-list-teamwork',
-                'description' => 'This project focuses on teamwork and GIT version control. This is a Simple Todo List manager.',
-                'project_url' => 'https://github.com/alessandropecchini99/laravel-boolean',
-            ),
-            4 =>
+            3 => 
             array (
                 'id' => 5,
-                'order' =>  4,
                 'type_id' => 1,
+                'order' => 4,
                 'title' => 'Admin Dashboard',
-                'image' => 'uploads/Hwj4MbRgQRTD9A0WluF3wqfwm5uPjUR7LPVmN5DS.png',
+                'image' => 'uploads/7MtE2DQQqGT4eGghyTogk8tlMdFjhzyT32jSBgvY.png',
                 'slug' => 'admin-dashboard',
                 'description' => 'Full responsive layout',
                 'project_url' => 'https://github.com/andriy-kolokolov/html-css-bootstrap-dashboard',
             ),
-            5 =>
+            4 => 
             array (
                 'id' => 6,
-                'order' => 5,
                 'type_id' => 1,
+                'order' => 5,
                 'title' => 'Spotify Clone',
-                'image' => 'uploads/uEKaUX5KRK22CiXqw7HReS4SgKJ9BWQhArIeUVNB.png',
+                'image' => 'uploads/33vq9Dx6Y2MvlYVB07tevunhQiEjxvxHeSO09Bti.png',
                 'slug' => 'spotify-clone',
                 'description' => 'Full responsive layout',
                 'project_url' => 'https://github.com/andriy-kolokolov/html-css-spotifyweb',
             ),
-            6 =>
+            5 => 
             array (
                 'id' => 7,
-                'order' =>  2,
                 'type_id' => 1,
+                'order' => 2,
                 'title' => 'Art Coach Portfolio',
-                'image' => 'uploads/1vMkcggfmoWLWktIlTcZacRXzMxRKFq48o7YqGsp.png',
+                'image' => 'uploads/glKaii2dL16DyOOJlogZ5OzJrQDHj5qgaMgk6fY1.png',
                 'slug' => 'art-coach-portfolio',
                 'description' => NULL,
                 'project_url' => 'https://github.com/andriy-kolokolov/proj-html-vuejs',
             ),
-            7 =>
+            6 => 
             array (
                 'id' => 8,
-                'order' =>  6,
                 'type_id' => 1,
+                'order' => 6,
                 'title' => 'Social Posts',
-                'image' => 'uploads/uOFKsKX7Z7m5X2k7bQETs4cIKDdyErsiyxaLpR99.png',
+                'image' => 'uploads/GLxd1CYvF9M9AI3qJXQrluqKypBF4H9aByz0UCa4.png',
                 'slug' => 'social-posts',
-                'description' => NULL,
+                'description' => 'Printing soical posts getting data from array, manage likes count',
                 'project_url' => 'https://github.com/andriy-kolokolov/js-social-posts',
             ),
-            8 =>
+            7 => 
             array (
                 'id' => 9,
-                'order' =>  7,
                 'type_id' => 1,
+                'order' => 7,
                 'title' => 'Shopping List Manager',
-                'image' => 'uploads/Dvbvp3hl3ws3dcSmtd2gWdkV7sixVlMaWwEva8BQ.png',
+                'image' => 'uploads/5wxWGwcg4e9FVlmIfNpavgMSZFVe3F30kU8wXk40.png',
                 'slug' => 'shopping-list-manager',
                 'description' => 'Add/delete todos for shoping',
                 'project_url' => 'https://github.com/andriy-kolokolov/js-lista-spesa',
             ),
+            8 => 
+            array (
+                'id' => 10,
+                'type_id' => 1,
+                'order' => 10,
+                'title' => 'Netflix Clone',
+                'image' => 'uploads/pJ2qDvi3GHKuOZq5kFYkPxAYxAf527B77scned6R.png',
+                'slug' => 'netflix-clone',
+                'description' => 'Netflix clone using rest api to get movies from "https://www.themoviedb.org/"',
+                'project_url' => 'https://github.com/andriy-kolokolov/vite-boolflix',
+            ),
+            9 => 
+            array (
+                'id' => 11,
+                'type_id' => 1,
+                'order' => 11,
+                'title' => 'E-commerce',
+                'image' => 'uploads/FaWnS5Vex6uoTZjDSLVYWhJW5CK3lYrLibUx2AHR.png',
+                'slug' => 'e-commerce',
+                'description' => 'Simple e-commerce page layout, changing images on hover cards',
+                'project_url' => 'https://github.com/andriy-kolokolov/html-css-boolando',
+            ),
+            10 => 
+            array (
+                'id' => 12,
+                'type_id' => 1,
+                'order' => 12,
+                'title' => 'DC Comics',
+                'image' => 'uploads/Cr38OhW1u4CvGVFWuhalBymlTmsGS4tZeobDA89N.png',
+                'slug' => 'dc-comics',
+                'description' => 'Getting data from reactive array in "vue store" and print cards, on card click show card and details in modal',
+                'project_url' => 'https://github.com/andriy-kolokolov/vite-comics',
+            ),
+            11 => 
+            array (
+                'id' => 13,
+                'type_id' => 1,
+                'order' => 13,
+                'title' => 'Discord Home Page Clone',
+                'image' => 'uploads/geam28zxJM4pNiy62xPBG0h9gwuP5btXdYTVnc63.png',
+                'slug' => 'discord-home-page-clone',
+                'description' => 'Discord home page clone',
+                'project_url' => 'https://github.com/andriy-kolokolov/htmlcss-discord',
+            ),
+            12 => 
+            array (
+                'id' => 14,
+                'type_id' => 1,
+                'order' => 14,
+                'title' => 'DropBox Home Page Clone',
+                'image' => 'uploads/I0DQ7qhEfr3QXeuiynaPyZWXEUMDwnoYYlQNIJCi.png',
+                'slug' => 'dropbox-home-page-clone',
+                'description' => 'Drop box home page clone',
+                'project_url' => 'https://github.com/andriy-kolokolov/htmlcss-dropbox',
+            ),
         ));
-
-
+        
+        
     }
 }
