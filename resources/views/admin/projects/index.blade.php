@@ -20,6 +20,11 @@
             Project "{{ session('success')->title }}" was added successfully.
         </div>
     @endif
+    @if (session('orderUpdated'))
+        <div class="alert alert-success">
+            Project order was updated successfully.
+        </div>
+    @endif
 
     <table class="table table-hover">
         <thead>
@@ -35,9 +40,34 @@
         </tr>
         </thead>
         <tbody>
+
         @foreach($projects->sortBy('order') as $project)
             <tr>
-                <td class="text-align text-center fw-bold fs-6">{{ $project->order }}</td>
+                <td class="text-align text-center fw-bold fs-6">
+                    <button type="button"
+                       class="btn btn-sm btn-primary"
+                       data-bs-toggle="popover"
+                       data-title="Popover title"
+                            data-trigger="manual"
+                       data-bs-content='
+                            <form class="row align-items-center" method="GET" action="{{ route('admin.projects.changeOrderNumber', ['project' => $project->id] ) }}" enctype="multipart/form-data">
+                                @csrf
+                                <div class="col d-flex align-items-center">
+                                    <input class="form-control" min="1" value="{{ $project->order }}" name="order" id="order" placeholder="Edit order num..." type="number">
+                                </div>
+                                <div class="col-auto">
+                                    <button class="btn btn-primary">
+                                        <i class="fa-solid fa-arrows-rotate"></i>
+                                    </button>
+                                </div>
+                            </form>
+                        '
+                       data-bs-html="true"
+                    >
+                        {{ $project->order }}
+                    </button>
+
+                </td>
                 <td class="text-align text-center fw-bold fs-6">{{ $project->title }}</td>
                 <td class="text-align text-center">
                     {{ $project->type->name }}
@@ -135,5 +165,4 @@
     </div>
 
     {{ $projects->links() }}
-
 @endsection

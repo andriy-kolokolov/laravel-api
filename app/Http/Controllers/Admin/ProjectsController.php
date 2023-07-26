@@ -240,4 +240,35 @@ class ProjectsController extends Controller {
         $project->delete();
         return to_route('admin.projects.index')->with('delete_success', $project);
     }
+
+    public function changeOrderNumber(Request $request, Project $project) {
+        $request->validate([
+            'order' => 'required|integer',
+        ]);
+        $newOrder = $request->all()['order'];
+
+        // to make refreshOrder method work correctly
+        if ($newOrder > $project->order) {
+            $newOrder++;
+        } else {
+            $newOrder--;
+        }
+
+        $project->order = $newOrder;
+        $project->update();
+
+        $this->refreshOrder();
+
+        return redirect()->route('admin.projects.index')->with('orderUpdated', $project);
+    }
+
+    public function refreshOrder() {
+        $rows = Project::orderBy('order')->get();
+        $lastOrder = 1;
+        foreach ($rows as $row) {
+            $row->order = $lastOrder;
+            $row->update();
+            $lastOrder++;
+        }
+    }
 }

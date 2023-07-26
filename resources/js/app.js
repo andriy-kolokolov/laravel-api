@@ -1,6 +1,7 @@
 import './bootstrap';
 
 import '~resources/scss/app.scss';
+
 import.meta.glob([
     '../img/**'
 ]);
@@ -19,14 +20,20 @@ if (confirmDelete) {
 
 // alert success fade out animation
 if (document.querySelector('.js-success-alert')) {
-    setTimeout(function() {
+    setTimeout(function () {
         let successAlert = document.querySelector('.js-success-alert');
         successAlert.classList.remove('show');
-        successAlert.addEventListener('transitionend', function() {
+        successAlert.addEventListener('transitionend', function () {
             successAlert.style.display = 'none';
         });
     }, 2000);
 }
 
-const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
-const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+// INITIALIZE TOOLTIPS
+const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
+// INITIALIZE POPOVERS
+const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]');
+const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl, {sanitize: false}));
+
+

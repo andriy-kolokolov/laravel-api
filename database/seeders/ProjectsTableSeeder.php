@@ -78,7 +78,7 @@ class ProjectsTableSeeder extends Seeder
             array (
                 'id' => 7,
                 'type_id' => 1,
-                'order' => 2,
+                'order' => 3,
                 'title' => 'Art Coach Portfolio',
                 'image' => 'uploads/glKaii2dL16DyOOJlogZ5OzJrQDHj5qgaMgk6fY1.png',
                 'slug' => 'art-coach-portfolio',
@@ -111,7 +111,7 @@ class ProjectsTableSeeder extends Seeder
             array (
                 'id' => 10,
                 'type_id' => 1,
-                'order' => 10,
+                'order' => 2,
                 'title' => 'Netflix Clone',
                 'image' => 'uploads/pJ2qDvi3GHKuOZq5kFYkPxAYxAf527B77scned6R.png',
                 'slug' => 'netflix-clone',
@@ -122,7 +122,7 @@ class ProjectsTableSeeder extends Seeder
             array (
                 'id' => 11,
                 'type_id' => 1,
-                'order' => 11,
+                'order' => 10,
                 'title' => 'E-commerce',
                 'image' => 'uploads/FaWnS5Vex6uoTZjDSLVYWhJW5CK3lYrLibUx2AHR.png',
                 'slug' => 'e-commerce',
@@ -133,7 +133,7 @@ class ProjectsTableSeeder extends Seeder
             array (
                 'id' => 12,
                 'type_id' => 1,
-                'order' => 12,
+                'order' => 11,
                 'title' => 'DC Comics',
                 'image' => 'uploads/Cr38OhW1u4CvGVFWuhalBymlTmsGS4tZeobDA89N.png',
                 'slug' => 'dc-comics',
@@ -144,7 +144,7 @@ class ProjectsTableSeeder extends Seeder
             array (
                 'id' => 13,
                 'type_id' => 1,
-                'order' => 13,
+                'order' => 12,
                 'title' => 'Discord Home Page Clone',
                 'image' => 'uploads/geam28zxJM4pNiy62xPBG0h9gwuP5btXdYTVnc63.png',
                 'slug' => 'discord-home-page-clone',
@@ -155,7 +155,7 @@ class ProjectsTableSeeder extends Seeder
             array (
                 'id' => 14,
                 'type_id' => 1,
-                'order' => 14,
+                'order' => 13,
                 'title' => 'DropBox Home Page Clone',
                 'image' => 'uploads/I0DQ7qhEfr3QXeuiynaPyZWXEUMDwnoYYlQNIJCi.png',
                 'slug' => 'dropbox-home-page-clone',

@@ -11,7 +11,7 @@
                     <a href="{{ route('admin.projects.index', ['$project' => $project]) }}">
                         <button class="mt-3 btn btn-primary mb-3">Back to Projects</button>
                     </a>
-                    <form method="POST" action="{{ route('admin.projects.update', $project->id) }}"
+                    <form method="POST" action="{{ route('admin.projects.update', $project) }}"
                           enctype="multipart/form-data">
                         @csrf
                         @method('PUT')
