@@ -189,6 +189,26 @@ class ProgrammingLanguageProjectTableSeeder extends Seeder
                 'project_id' => 14,
                 'programming_language_id' => 6,
             ),
+            34 => 
+            array (
+                'project_id' => 15,
+                'programming_language_id' => 1,
+            ),
+            35 => 
+            array (
+                'project_id' => 15,
+                'programming_language_id' => 7,
+            ),
+            36 => 
+            array (
+                'project_id' => 15,
+                'programming_language_id' => 2,
+            ),
+            37 => 
+            array (
+                'project_id' => 15,
+                'programming_language_id' => 8,
+            ),
         ));
         
         

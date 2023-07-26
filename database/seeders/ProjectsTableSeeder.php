@@ -23,7 +23,7 @@ class ProjectsTableSeeder extends Seeder
             array (
                 'id' => 1,
                 'type_id' => 1,
-                'order' => 1,
+                'order' => 3,
                 'title' => 'Whatsap Clone',
                 'image' => 'uploads/MTceIzl8o9X0fi9zxfV73j1Po5wv4HEge43PriQP.png',
                 'slug' => 'whatsap-clone',
@@ -34,7 +34,7 @@ class ProjectsTableSeeder extends Seeder
             array (
                 'id' => 2,
                 'type_id' => 2,
-                'order' => 8,
+                'order' => 14,
                 'title' => 'Java CRUD and tests',
                 'image' => NULL,
                 'slug' => 'java-crud-and-tests',
@@ -45,7 +45,7 @@ class ProjectsTableSeeder extends Seeder
             array (
                 'id' => 3,
                 'type_id' => 2,
-                'order' => 9,
+                'order' => 13,
                 'title' => 'Java Roman Calculator',
                 'image' => NULL,
                 'slug' => 'java-roman-calculator',
@@ -56,7 +56,7 @@ class ProjectsTableSeeder extends Seeder
             array (
                 'id' => 5,
                 'type_id' => 1,
-                'order' => 4,
+                'order' => 5,
                 'title' => 'Admin Dashboard',
                 'image' => 'uploads/7MtE2DQQqGT4eGghyTogk8tlMdFjhzyT32jSBgvY.png',
                 'slug' => 'admin-dashboard',
@@ -67,7 +67,7 @@ class ProjectsTableSeeder extends Seeder
             array (
                 'id' => 6,
                 'type_id' => 1,
-                'order' => 5,
+                'order' => 6,
                 'title' => 'Spotify Clone',
                 'image' => 'uploads/33vq9Dx6Y2MvlYVB07tevunhQiEjxvxHeSO09Bti.png',
                 'slug' => 'spotify-clone',
@@ -78,7 +78,7 @@ class ProjectsTableSeeder extends Seeder
             array (
                 'id' => 7,
                 'type_id' => 1,
-                'order' => 3,
+                'order' => 4,
                 'title' => 'Art Coach Portfolio',
                 'image' => 'uploads/glKaii2dL16DyOOJlogZ5OzJrQDHj5qgaMgk6fY1.png',
                 'slug' => 'art-coach-portfolio',
@@ -89,7 +89,7 @@ class ProjectsTableSeeder extends Seeder
             array (
                 'id' => 8,
                 'type_id' => 1,
-                'order' => 6,
+                'order' => 9,
                 'title' => 'Social Posts',
                 'image' => 'uploads/GLxd1CYvF9M9AI3qJXQrluqKypBF4H9aByz0UCa4.png',
                 'slug' => 'social-posts',
@@ -100,7 +100,7 @@ class ProjectsTableSeeder extends Seeder
             array (
                 'id' => 9,
                 'type_id' => 1,
-                'order' => 7,
+                'order' => 12,
                 'title' => 'Shopping List Manager',
                 'image' => 'uploads/5wxWGwcg4e9FVlmIfNpavgMSZFVe3F30kU8wXk40.png',
                 'slug' => 'shopping-list-manager',
@@ -122,7 +122,7 @@ class ProjectsTableSeeder extends Seeder
             array (
                 'id' => 11,
                 'type_id' => 1,
-                'order' => 10,
+                'order' => 7,
                 'title' => 'E-commerce',
                 'image' => 'uploads/FaWnS5Vex6uoTZjDSLVYWhJW5CK3lYrLibUx2AHR.png',
                 'slug' => 'e-commerce',
@@ -133,7 +133,7 @@ class ProjectsTableSeeder extends Seeder
             array (
                 'id' => 12,
                 'type_id' => 1,
-                'order' => 11,
+                'order' => 8,
                 'title' => 'DC Comics',
                 'image' => 'uploads/Cr38OhW1u4CvGVFWuhalBymlTmsGS4tZeobDA89N.png',
                 'slug' => 'dc-comics',
@@ -144,7 +144,7 @@ class ProjectsTableSeeder extends Seeder
             array (
                 'id' => 13,
                 'type_id' => 1,
-                'order' => 12,
+                'order' => 10,
                 'title' => 'Discord Home Page Clone',
                 'image' => 'uploads/geam28zxJM4pNiy62xPBG0h9gwuP5btXdYTVnc63.png',
                 'slug' => 'discord-home-page-clone',
@@ -155,12 +155,26 @@ class ProjectsTableSeeder extends Seeder
             array (
                 'id' => 14,
                 'type_id' => 1,
-                'order' => 13,
+                'order' => 11,
                 'title' => 'DropBox Home Page Clone',
                 'image' => 'uploads/I0DQ7qhEfr3QXeuiynaPyZWXEUMDwnoYYlQNIJCi.png',
                 'slug' => 'dropbox-home-page-clone',
                 'description' => 'Drop box home page clone',
                 'project_url' => 'https://github.com/andriy-kolokolov/htmlcss-dropbox',
+            ),
+            13 => 
+            array (
+                'id' => 15,
+                'type_id' => 3,
+                'order' => 1,
+                'title' => 'Cocktail Bar Team Lead',
+                'image' => 'uploads/olEEczxuuZIvt5AUI79eAkzQyCoFqbfFzAPWi4al.png',
+                'slug' => 'cocktail-bar-team-lead',
+                'description' => 'In this project I was appointed as the team lead. I assigned tasks to my colleagues and provided guidance on using Git version control effectively. My role required mastering merging techniques to consolidate contributions from team members. By efficiently managing collaboration and version control, we successfully delivered a collaborative project.
+
+There are back end in one repository: https://github.com/andriy-kolokolov/laravel-vue-router
+And front in another: https://github.com/andriy-kolokolov/laravel-vue-router-frontoffice',
+                'project_url' => 'https://github.com/andriy-kolokolov/laravel-vue-router-frontoffice',
             ),
         ));
         

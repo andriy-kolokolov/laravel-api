@@ -52,7 +52,7 @@ class TechnologiesTableSeeder extends Seeder
             6 => 
             array (
                 'id' => 9,
-                'name' => 'VUE JS',
+                'name' => 'VUE.JS',
             ),
             7 => 
             array (
