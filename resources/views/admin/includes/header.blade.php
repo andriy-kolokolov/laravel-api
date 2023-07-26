@@ -15,11 +15,11 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <!--    POSTS    -->
-                    <li class="nav-item {{ request()->is('admin/posts*') ? 'active' : '' }}">
-                        <a class="nav-link " href="{{ route('admin.posts.index') }}">
-                            Posts
-                        </a>
-                    </li>
+{{--                    <li class="nav-item {{ request()->is('admin/posts*') ? 'active' : '' }}">--}}
+{{--                        <a class="nav-link " href="{{ route('admin.posts.index') }}">--}}
+{{--                            Posts--}}
+{{--                        </a>--}}
+{{--                    </li>--}}
 
                     <!--    PROJECTS    -->
                     <li class="nav-item {{ request()->is('admin/projects*') ? 'active' : '' }}">

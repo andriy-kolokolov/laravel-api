@@ -16,7 +16,7 @@ use Illuminate\Support\Str;
 class ProjectsController extends Controller {
 
     private array $validations = [
-        'image' => 'nullable|image|max:4096',
+        'image' => 'nullable|image',
         'title' => 'required|string|min:5|max:50',
         'type' => 'required|string',
         'programming_languages' => 'string|max:500',
