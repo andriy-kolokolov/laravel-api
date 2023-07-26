@@ -24,6 +24,7 @@
     <table class="table table-hover">
         <thead>
         <tr class="fs-5 text-center text-align">
+            <th class="col">#</th>
             <th class="col">Title</th>
             <th class="col">Type</th>
             <th class="col">Programming Languages</th>
@@ -34,8 +35,9 @@
         </tr>
         </thead>
         <tbody>
-        @foreach($projects as $project)
+        @foreach($projects->sortBy('order') as $project)
             <tr>
+                <td class="text-align text-center fw-bold fs-6">{{ $project->order }}</td>
                 <td class="text-align text-center fw-bold fs-6">{{ $project->title }}</td>
                 <td class="text-align text-center">
                     {{ $project->type->name }}

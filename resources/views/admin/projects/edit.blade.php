@@ -83,7 +83,7 @@
                             <input type="text" name="technologies" id="technologies"
                                    class="form-control"
                                    value="{{ implode(', ', $project->technologies()->pluck('name')->toArray()) }}"
-                                   required>
+                                   >
                             @error('technologies')
                             <div class="text-danger">
                                 {{ $message }}

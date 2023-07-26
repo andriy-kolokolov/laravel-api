@@ -20,9 +20,9 @@ class ProjectsController extends Controller {
         'title' => 'required|string|min:5|max:50',
         'type' => 'required|string',
         'programming_languages' => 'string|max:500',
-        'technologies' => 'string|max:500',
+        'technologies' => 'nullable|max:500',
         'description' => 'nullable',
-        'project_url' => 'required|url|max:600',
+        'project_url' => 'nullable|url|max:600',
     ];
 
     private array $validation_messages = [

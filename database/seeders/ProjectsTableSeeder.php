@@ -82,7 +82,7 @@ class ProjectsTableSeeder extends Seeder
                 'title' => 'Art Coach Portfolio',
                 'image' => 'uploads/glKaii2dL16DyOOJlogZ5OzJrQDHj5qgaMgk6fY1.png',
                 'slug' => 'art-coach-portfolio',
-                'description' => NULL,
+                'description' => 'Portfolio site of an art coach figure',
                 'project_url' => 'https://github.com/andriy-kolokolov/proj-html-vuejs',
             ),
             6 => 
