@@ -23,7 +23,7 @@
     ```sh
     php artisan migrate:fresh --seed
 
-- #### Create storage link for project images already in 'upload folder'':
+- #### Create storage link for project images already in 'upload' folder:
     ```sh
     php artisan storage:link
 
