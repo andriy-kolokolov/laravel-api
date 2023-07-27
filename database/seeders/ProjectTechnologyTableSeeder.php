@@ -94,6 +94,11 @@ class ProjectTechnologyTableSeeder extends Seeder
                 'project_id' => 15,
                 'technology_id' => 7,
             ),
+            15 => 
+            array (
+                'project_id' => 9,
+                'technology_id' => 6,
+            ),
         ));
         
         

@@ -56,7 +56,7 @@ class ProjectsTableSeeder extends Seeder
             array (
                 'id' => 5,
                 'type_id' => 1,
-                'order' => 5,
+                'order' => 4,
                 'title' => 'Admin Dashboard',
                 'image' => 'uploads/7MtE2DQQqGT4eGghyTogk8tlMdFjhzyT32jSBgvY.png',
                 'slug' => 'admin-dashboard',
@@ -78,7 +78,7 @@ class ProjectsTableSeeder extends Seeder
             array (
                 'id' => 7,
                 'type_id' => 1,
-                'order' => 4,
+                'order' => 5,
                 'title' => 'Art Coach Portfolio',
                 'image' => 'uploads/glKaii2dL16DyOOJlogZ5OzJrQDHj5qgaMgk6fY1.png',
                 'slug' => 'art-coach-portfolio',
@@ -170,10 +170,9 @@ class ProjectsTableSeeder extends Seeder
                 'title' => 'Cocktail Bar Team Lead',
                 'image' => 'uploads/olEEczxuuZIvt5AUI79eAkzQyCoFqbfFzAPWi4al.png',
                 'slug' => 'cocktail-bar-team-lead',
-                'description' => 'In this project I was appointed as the team lead. I assigned tasks to my colleagues and provided guidance on using Git version control effectively. My role required mastering merging techniques to consolidate contributions from team members. By efficiently managing collaboration and version control, we successfully delivered a collaborative project.
-
+                'description' => 'As the project team lead, I guided Git version control, mastering merging for smooth collaboration. This helped us overcome challenges and deliver the project successfully, exceeding expectations through efficient teamwork.
 There are back end in one repository: https://github.com/andriy-kolokolov/laravel-vue-router
-And front in another: https://github.com/andriy-kolokolov/laravel-vue-router-frontoffice',
+And front end in another: https://github.com/andriy-kolokolov/laravel-vue-router-frontoffice',
                 'project_url' => 'https://github.com/andriy-kolokolov/laravel-vue-router-frontoffice',
             ),
         ));
