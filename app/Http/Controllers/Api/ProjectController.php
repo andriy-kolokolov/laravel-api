@@ -10,7 +10,7 @@ use Illuminate\Http\Request;
 class ProjectController extends Controller
 {
     public function index(Request $request): JsonResponse {
-        $perPage = $request->query('per_page', 8);
+        $perPage = $request->query('per_page', 6);
 
         $projects = Project::with('type', 'programmingLanguages', 'technologies')
             ->orderBy('order')
@@ -20,5 +20,15 @@ class ProjectController extends Controller
 
     public function show(Project $project) {
 
+    }
+
+    public function search(Request $request) {
+        $searchQuery = $request->query('searchQuery');
+        $perPage = $request->query('per_page', 6);
+
+        $projects = Project::where('title', 'LIKE', '%' . $searchQuery . '%')
+            ->with('type', 'programmingLanguages', 'technologies')
+            ->paginate($perPage);
+        return response()->json($projects);
     }
 }
