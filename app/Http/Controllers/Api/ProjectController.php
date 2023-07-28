@@ -11,24 +11,19 @@ class ProjectController extends Controller
 {
     public function index(Request $request): JsonResponse {
         $perPage = $request->query('per_page', 6);
-
         $projects = Project::with('type', 'programmingLanguages', 'technologies')
             ->orderBy('order')
             ->paginate($perPage);
         return response()->json($projects);
     }
 
-    public function show(Project $project) {
-
-    }
-
     public function search(Request $request) {
         $searchQuery = $request->query('searchQuery');
-        $perPage = $request->query('per_page', 6);
-
+//        $perPage = $request->query('per_page');
         $projects = Project::where('title', 'LIKE', '%' . $searchQuery . '%')
             ->with('type', 'programmingLanguages', 'technologies')
-            ->paginate($perPage);
+            ->orderBy('order')
+            ->get();
         return response()->json($projects);
     }
 }
