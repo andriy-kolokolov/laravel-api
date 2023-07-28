@@ -23,7 +23,7 @@ class ProjectsTableSeeder extends Seeder
             array (
                 'id' => 1,
                 'type_id' => 1,
-                'order' => 3,
+                'order' => 5,
                 'title' => 'Whatsap Clone',
                 'image' => 'uploads/MTceIzl8o9X0fi9zxfV73j1Po5wv4HEge43PriQP.png',
                 'slug' => 'whatsap-clone',
@@ -56,7 +56,7 @@ class ProjectsTableSeeder extends Seeder
             array (
                 'id' => 5,
                 'type_id' => 1,
-                'order' => 4,
+                'order' => 6,
                 'title' => 'Admin Dashboard',
                 'image' => 'uploads/7MtE2DQQqGT4eGghyTogk8tlMdFjhzyT32jSBgvY.png',
                 'slug' => 'admin-dashboard',
@@ -67,7 +67,7 @@ class ProjectsTableSeeder extends Seeder
             array (
                 'id' => 6,
                 'type_id' => 1,
-                'order' => 6,
+                'order' => 3,
                 'title' => 'Spotify Clone',
                 'image' => 'uploads/33vq9Dx6Y2MvlYVB07tevunhQiEjxvxHeSO09Bti.png',
                 'slug' => 'spotify-clone',
@@ -78,7 +78,7 @@ class ProjectsTableSeeder extends Seeder
             array (
                 'id' => 7,
                 'type_id' => 1,
-                'order' => 5,
+                'order' => 4,
                 'title' => 'Art Coach Portfolio',
                 'image' => 'uploads/glKaii2dL16DyOOJlogZ5OzJrQDHj5qgaMgk6fY1.png',
                 'slug' => 'art-coach-portfolio',
